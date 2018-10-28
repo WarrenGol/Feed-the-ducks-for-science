@@ -17,8 +17,8 @@ services:
   mongodb:
     image: mongo:3.6.3-jessie
     environment:
-      - MONGO_INIT_DB_ROOT_USERNAME=${MONGO_INIT_USERNAME}
-      - MONGO_INIT_DB_ROOT_PASSWORD=${MONGO_INIT_PASSWORD}
+      - MONGO_INIT_USERNAME=${MONGO_INIT_USERNAME}
+      - MONGO_INIT_PASSWORD=${MONGO_INIT_PASSWORD}
     expose: 
       - 27017
     volumes: 
