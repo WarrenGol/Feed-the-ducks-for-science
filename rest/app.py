@@ -13,7 +13,7 @@ db = PyMongo(app,
             authSource='admin').db
 
 
-@app.route('/submit', methods=['POST'])
+@app.route('/submit-data', methods=['POST'])
 def submit():
     data = {}
     data['time'] = request.form.get('time') # or datetime.datetime.utcnow() ?

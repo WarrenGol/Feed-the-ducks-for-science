@@ -3,32 +3,66 @@
 
 <head>
     <title> Duck Duck </title>
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <meta charset="UTF-8"> 
     <meta name="description" content="Science for ducks">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <form>
-        <label htmlfor="time"> Time fed </label>
-        <input type="text" name="time" id="time">
-        
-        <label htmlfor="location"> Location </label>
-        <input type="text" name="location" id="location">
-        
-        <label htmlfor="duck_count"> Number of ducks </label>
-        <input type="text" name="duck_count" id="duck_count">
-        
-        <label htmlfor="food"> Food given </label>
-        <input type="text" name="food" id="food">
-        
-        <label htmlfor="food_type"> Type of food </label>
-        <input type="text" name="food_type" id="food_type">
-        
-        <label htmlfor="food_quantity"> Quantity of food </label>
-        <input type="text" name="food_quantity" id="food_quantity">
+    <form >
+	<div class="field">
+        <label class="label" for="time"> Time fed </label>
+        <div class="control">
+	<input class="input" type="text" name="time" id="time">
+        </div>
+	</div>
 
-        <input type="submit" value="submit"a>
+	<div class="field">
+        <label class="label" for="location"> Location </label>
+	<div class="control">
+        <input class="input" type="text" name="location" id="location">
+        </div>
+	</div>
+
+	<div class="field">
+        <label class="label" for="duck_count"> Number of ducks </label>
+        <div class="control">
+	<input class="input" type="text" name="duck_count" id="duck_count">
+	</div>
+	</div>
+
+        <div class="field>
+        <label class="label" for="food"> Food given </label>
+        <div class="control">
+	<input class="input" type="text" name="food" id="food">
+        </div>
+	</div>
+
+	<div class="field">
+        <label class="label" for="food_type"> Type of food </label>
+        <div class="control>
+	<input class="input" type="text" name="food_type" id="food_type">
+        </div>
+	</div>
+
+	<div class="field">
+        <label class="label" for="food_quantity"> Quantity of food </label>
+        <div class="control>
+	<input class="input" type="text" name="food_quantity" id="food_quantity">
+	</div>
+	</div>
+
+	<div class="field">
+	<label class="label" for="repeat"> Repeat </label>
+	<div class="control">
+	<input class="checkbox" type="checkbox" name="repeat" id="repeat">
+	</div>
+	</div>
+
+	<div class="control">
+        <input class="button" type="submit" value="submit"a>
+	</div>
     </form>
 </body>
 
