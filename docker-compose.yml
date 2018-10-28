@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  server:
+    image: nginx_server:v1
+    ports:
+      - 80:80
+      
+  rest:
+    image: python_app:v1
+    depends_on: 
+      - mongodb
+    environment: 
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+
+  mongodb:
+    image: mongo:3.6.3-jessie
+    environment:
+      - MONGO_INIT_DB_ROOT_USERNAME=${MONGO_INIT_USERNAME}
+      - MONGO_INIT_DB_ROOT_PASSWORD=${MONGO_INIT_PASSWORD}
+    expose: 
+      - 27017
+    volumes: 
+      - mongodb:/data/db
+      - "./mongo/:/docker-entrypoint-initdb.d/"
+
+
+volumes:
+  mongodb:
