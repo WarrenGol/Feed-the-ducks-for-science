@@ -22,17 +22,7 @@ def submit():
     data['duck_count'] = request.form.get('duck_count')
     data['food_type'] = request.form.get('food_type')
     data['food_quantity'] = requst.form.get('food_quantity')
+    data['repeat'] = request.form.get('repeat')
 
     db.duck_info.insert(data)
-
-@app.route('/set_schedule', methods=['POST'])
-def schedule():
-    # todo schedule, 
-    # Could create an event that inserts into mongo 
-    
-    # Or.. could insert into mongo once, record the date and
-    # the number of times to trigger the event, then you could 
-    # just calculate from that dataset how many times it would've
-    # triggered.
-    pass
 
