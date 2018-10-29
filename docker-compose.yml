@@ -5,6 +5,8 @@ services:
     image: nginx_server:v1
     ports:
       - 80:80
+    depends_on:
+      - rest
       
   rest:
     image: python_app:v1
@@ -23,8 +25,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INIT_PASSWORD}
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
-    expose: 
-      - 27017
+    ports:
+      - 27017:27017
     volumes: 
       - mongodb:/data/db
       - "./mongo/:/docker-entrypoint-initdb.d/"
@@ -32,3 +34,9 @@ services:
 
 volumes:
   mongodb:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default

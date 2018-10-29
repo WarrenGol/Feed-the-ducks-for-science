@@ -21,7 +21,7 @@ def submit():
     data['location'] = request.form.get('location')
     data['duck_count'] = request.form.get('duck_count')
     data['food_type'] = request.form.get('food_type')
-    data['food_quantity'] = requst.form.get('food_quantity')
+    data['food_quantity'] = request.form.get('food_quantity')
     data['repeat'] = request.form.get('repeat')
 
     db.duck_info.insert(data)
