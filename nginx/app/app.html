@@ -15,19 +15,23 @@
 	position: relative;
 	width: 20px;
 	height: 20px;
+	top: 20px;
 
-        -webkit-animation: swim 10s infinite;
-	animation: swim 10s infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+
+        -webkit-animation: swim 50s infinite;
+	animation: swim 50s infinite;
 }
 
 @-webkit-keyframes swim {
-	0%: {top: 0px }
-	100% {top: 100px }
+	0% { left: 100vw }
+	100% {left: -25px }
 }
 
 @keyframes swim {
-	0%: { top: 0px; }
-	100%: { top: 100px; }
+	0% { left: 100vw; }
+	100% { left: -25px; }
 }
 
 
