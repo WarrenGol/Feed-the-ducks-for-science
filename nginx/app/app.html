@@ -9,20 +9,49 @@
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <link href="/css/bulma.min.css" rel="stylesheet" type="text/css">
 
+<style >
+
+.swimming-duck{
+	position: relative;
+	width: 20px;
+	height: 20px;
+
+        -webkit-animation: swim 10s infinite;
+	animation: swim 10s infinite;
+}
+
+@-webkit-keyframes swim {
+	0%: {top: 0px }
+	100% {top: 100px }
+}
+
+@keyframes swim {
+	0%: { top: 0px; }
+	100%: { top: 100px; }
+}
+
+
+</style>
+
 </head>
 
 <body>
     <section class="hero is-info">
 
+    <div class="swimming-duck">
+        <img src="/images/small-duck.svg"/>
+    </div>
+
     <div class="hero-body">
         <div class="container">
             <h1 class="title" style="color:black"> Have you fed the ducks? </h1>
             <h2 class="subtitle" style="color:black"> Tell us in the form below </h2>
-            
         </div>
     </div>
     </section>
 
+    <section>
+    <div class="container">
     <form >
 	<div class="field">
           <label class="label" for="time"> Time fed </label>
@@ -45,7 +74,7 @@
 	  </div>
 	</div>
 
-        <div class="field>
+        <div class="field">
           <label class="label" for="food"> Food given </label>
           <div class="control">
 	  <input class="input" type="text" name="food" id="food">
@@ -54,7 +83,7 @@
 
 	<div class="field">
           <label class="label" for="food_type"> Type of food </label>
-          <div class="control>
+          <div class="control">
 	  <input class="input" type="text" name="food_type" id="food_type">
           </div>
 	</div>
@@ -80,6 +109,9 @@
         </div>
 
     </form>
+    </div>
+    <section>
+
 </body>
 
 </html>
