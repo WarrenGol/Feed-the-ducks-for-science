@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask_pymongo import PyMongo
 
 import os
@@ -16,7 +16,7 @@ db = PyMongo(app,
 @app.route('/submit-data', methods=['POST'])
 def submit():
     data = {}
-    data['time'] = request.form.get('time') # or datetime.datetime.utcnow() ?
+    data['time'] = request.form.get('time')
     data['food'] = request.form.get('food')
     data['location'] = request.form.get('location')
     data['duck_count'] = request.form.get('duck_count')
@@ -26,3 +26,4 @@ def submit():
 
     db.duck_info.insert(data)
 
+    return redirect('/', code=302)

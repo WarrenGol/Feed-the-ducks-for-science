@@ -13,12 +13,16 @@ services:
     environment: 
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 5000:5000
 
   mongodb:
     image: mongo:3.6.3-jessie
     environment:
       - MONGO_INIT_USERNAME=${MONGO_INIT_USERNAME}
       - MONGO_INIT_PASSWORD=${MONGO_INIT_PASSWORD}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
     expose: 
       - 27017
     volumes: 
