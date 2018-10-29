@@ -19,8 +19,8 @@ services:
   mongodb:
     image: mongo:3.6.3-jessie
     environment:
-      - MONGO_INIT_USERNAME=${MONGO_INIT_USERNAME}
-      - MONGO_INIT_PASSWORD=${MONGO_INIT_PASSWORD}
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INIT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INIT_PASSWORD}
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
     expose: 
