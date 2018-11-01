@@ -19,10 +19,10 @@ def submit():
     data['time'] = request.form.get('time')
     data['food'] = request.form.get('food')
     data['location'] = request.form.get('location')
-    data['duck_count'] = request.form.get('duck_count')
+    data['duck_count'] = float(request.form.get('duck_count'))
     data['food_type'] = request.form.get('food_type')
-    data['food_quantity'] = request.form.get('food_quantity')
-    data['repeat'] = request.form.get('repeat')
+    data['food_quantity'] = float(request.form.get('food_quantity'))
+    data['repeat'] = bool(request.form.get('repeat'))
 
     db.duck_info.insert(data)
 
